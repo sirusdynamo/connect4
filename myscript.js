@@ -45,10 +45,10 @@ function checkBottom(colIndex){
 // that is 4 horizontal,vertical or diagonal objects of
 // the same colour immediately adjacent to another in straigt line.
 function colorMatchCheck(one,two,three,four){
-    return(one === two && one !== undefined && one ===  three && one ===four && one === 'rgb(128, 128, 128)')
+    return(one === two && one !== undefined && one ===  three && one ===four && one !== 'rgb(128, 128, 128)')
 
 }
-// check for horizonta wins
+// check for horizontal wins
 function horizontalWinCheck(){
     for (var row =0; row<6; row++){
         for (var col = 0; col <4; col++){
