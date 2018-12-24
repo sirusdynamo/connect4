@@ -1,9 +1,9 @@
 var player1 =prompt("Player one: Enter your name you will be blue")
-var player1color ='rgb(86, 151, 255)'
+var player1color ='rgb(86, 151, 255)';
 
 
 var player2 =prompt("Player two: Enter your name you will be blue")
-var player2color ='rgb(237, 45, 73)'
+var player2color ='rgb(237, 45, 73)';
 
 
 var game_on =true;
@@ -35,7 +35,7 @@ function checkBottom(colIndex){
     var colorReport =checkColor(5,colIndex);
     for(var row=5; row > -1 ;row--){
         colorReport =checkColor(row,colIndex);
-        if (colorReport === 'rgb(128, 128, 128'){
+        if(colorReport === 'rgb(128, 128, 128)'){
             return row
         }
     }
@@ -83,7 +83,7 @@ function verticalWinCheck(){
 function diagonalWinCheck(){
     for(var col = 0; col < 5; col++){
         for(var row = 0; row <7; row ++){
-            if (colorMatchCheck(checkColor(row,col),checkColor(row+1,col+1),checkColor(row+2,col+2),checkColor(row+3,col+3))){
+            if(colorMatchCheck(checkColor(row,col),checkColor(row+1,col+1),checkColor(row+2,col+2),checkColor(row+3,col+3))){
                 console.log('diag');
                 reportWin(row,col);
                 return  true;
@@ -122,7 +122,7 @@ $('.board button').on('click',function(){
     
     changeColor(bottomAvail,col,currentColor);
     if(horizontalWinCheck() || verticalWinCheck() || diagonalWinCheck()){
-        $('h1').text( currentName+"<b> You have won </b>");
+        $('h1').text( currentName+" You have won ");
         $('h2').fadeOut('fast');
         $('h3').fadeOut('fast');
 
